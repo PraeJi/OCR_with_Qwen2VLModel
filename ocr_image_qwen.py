@@ -64,14 +64,14 @@ def ocr_image(img, prompt):
   return text
 
 """# For test ocr_image function"""
-prompt = "Extract text from the image (OCR)"
-image_path = "/content/Screenshot 2025-11-29 212227.png"
-result = ocr_image(image_path, prompt)
+# prompt = "Extract text from the image (OCR)"
+# image_path = "/content/Screenshot 2025-11-29 212227.png"
+# result = ocr_image(image_path, prompt)
 
-print(result)
+# print(result)
 
-image_path1 = "https://media.istockphoto.com/id/914023158/vector/clean-minimal-invoice-vector-template-design.jpg?s=612x612&w=0&k=20&c=bUdGOlc4-xIrL6qyjN1P3izkfOM3sbb5EqYYiPJCPrc="
-result_url = ocr_image(image_path1, prompt)
+# image_path1 = "https://media.istockphoto.com/id/914023158/vector/clean-minimal-invoice-vector-template-design.jpg?s=612x612&w=0&k=20&c=bUdGOlc4-xIrL6qyjN1P3izkfOM3sbb5EqYYiPJCPrc="
+# result_url = ocr_image(image_path1, prompt)
 
-print(result_url)
+# print(result_url)
 
