@@ -26,9 +26,9 @@ processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")
 print("model loaded")
 
 @torch.inference_mode()
-def ocr_image(img):
+def ocr_image(img, prompt):
 
-  prompt = "Extract text from the image (OCR)"
+  # prompt = "Extract text from the image (OCR)"
   messages = [
       {
           "role": "user",
@@ -64,14 +64,14 @@ def ocr_image(img):
   return text
 
 """# For test ocr_image function"""
-
+prompt = "Extract text from the image (OCR)"
 image_path = "/content/Screenshot 2025-11-29 212227.png"
-result = ocr_image(image_path)
+result = ocr_image(image_path, prompt)
 
-result
+print(result)
 
 image_path1 = "https://media.istockphoto.com/id/914023158/vector/clean-minimal-invoice-vector-template-design.jpg?s=612x612&w=0&k=20&c=bUdGOlc4-xIrL6qyjN1P3izkfOM3sbb5EqYYiPJCPrc="
-result_url = ocr_image(image_path1)
+result_url = ocr_image(image_path1, prompt)
 
-result_url
+print(result_url)
 
