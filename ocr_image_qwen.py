@@ -15,19 +15,15 @@ import os
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Commented out IPython magic to ensure Python compatibility.
-# print("model loading...")
-# 
-# %%capture
-# model = Qwen2VLForConditionalGeneration.from_pretrained(
-#     "Qwen/Qwen2-VL-2B-Instruct",
-#     torch_dtype = torch.float16,
-#     device_map = {"": device}
-# )
-# model.eval()
-# processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")
-# 
-# print("model loaded")
+print("model loading...")
+model = Qwen2VLForConditionalGeneration.from_pretrained(
+    "Qwen/Qwen2-VL-2B-Instruct",
+    torch_dtype = torch.float16,
+    device_map = {"": device}
+)
+model.eval()
+processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")
+print("model loaded")
 
 @torch.inference_mode()
 def ocr_image(img):
