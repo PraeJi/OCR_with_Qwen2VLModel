@@ -116,10 +116,11 @@ def content_requests_schema():
 
     return schema
 
-img = "/content/588497508_26033068199629460_2091224368113351131_n.jpg"
-result = ocr_and_classify(img)
+# For testing
+# img = "/content/588497508_26033068199629460_2091224368113351131_n.jpg"
+# result = ocr_and_classify(img)
 
-print(result)
+# print(result)
 
 """```json
 {
